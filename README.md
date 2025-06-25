@@ -1,17 +1,18 @@
-All terminal command should be done from TechnicalTest.Api folder.
+# Technical Test
+Blog API made for a recruitment test.
 
-To init the DB(by default the db is already initialized):
+To launch the app:
 
-dotnet tool install --global dotnet-ef
+From Visual Studio:
 
-dotnet ef migrations add InitialCreate
+    Open and Start TechnicalTest.sln,  use the "swagger", "docker" profile from TechnicalTest.Api or "dockercompose" from the DockerCompose project, it should open swagger in your browser.
+    
+From Command line:
 
-dotnet ef database update
+    Go to the directory of TechnicalTest.Api (<repository path>\TechnicalTest\TechnicalTest.Api) and run the command:
+    
+    dotnet run
 
-To start the project from terminal:
+    Go to http://localhost:7185/swagger and simply click on Author or Post to access the controller request, select the request you want and click on "Try it out" on the top right.
 
-dotnet run
-
-then go to https://localhost:7185/swagger
-
-Or simply from Visual studio using launchSetting.json use the "swagger" or "docker" profile, it should open swagger in your browser.
+You will be able to enter parameters if required then simply click execute and your response will appear in the "Responses" section under "Server response".
