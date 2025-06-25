@@ -1,0 +1,6 @@
+services:
+  technicaltest.api:
+    image: ${DOCKER_REGISTRY-}technicaltestapi
+    build:
+      context: .
+      dockerfile: TechnicalTest.Api/Dockerfile

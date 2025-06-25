@@ -1,0 +1,39 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@host=https://localhost
+@port=7185
+
+// Get a specific contributor
+@id_to_get=1
+GET {{host}}:{{port}}/Author/{{id_to_get}}
+
+###
+
+// Add a new contributor
+POST {{host}}:{{port}}/Author
+Content-Type: application/json
+
+{
+  "name": "John",
+  "surname": "Doe",
+}
+
+###
+
+// Get a specific contributor
+@id_to_get=1
+GET {{host}}:{{port}}/Post/{{id_to_get}}
+
+###
+
+// Add a new contributor
+POST {{host}}:{{port}}/Post
+Content-Type: application/json
+
+{
+  "authorId": "John Doe 2",
+  "title": "The Title of the Post",
+  "description": "A description of the Post"
+  "content": "Content of the Post"
+}
+
+###
